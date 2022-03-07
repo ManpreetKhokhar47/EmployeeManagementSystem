@@ -1,0 +1,39 @@
+--------------------------------------------------------
+--  File created - Wednesday-February-17-2016   
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Table EMP_INFO
+--------------------------------------------------------
+
+  CREATE TABLE "SYSTEM"."EMP_INFO" 
+   (	"ID" NUMBER(*,0), 
+	"NAME" VARCHAR2(20 BYTE), 
+	"FNAME" VARCHAR2(25 BYTE), 
+	"CITY" VARCHAR2(20 BYTE), 
+	"CONTACTNO" VARCHAR2(20 BYTE), 
+	"REG_DATE" VARCHAR2(20 BYTE), 
+	"SALARY" VARCHAR2(20 BYTE), 
+	"POST" VARCHAR2(20 BYTE), 
+	"ADDRESS" VARCHAR2(100 BYTE)
+   ) PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index PKID
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "SYSTEM"."PKID" ON "SYSTEM"."EMP_INFO" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  Constraints for Table EMP_INFO
+--------------------------------------------------------
+
+  ALTER TABLE "SYSTEM"."EMP_INFO" ADD CONSTRAINT "PKID" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT)
+  TABLESPACE "SYSTEM"  ENABLE;
